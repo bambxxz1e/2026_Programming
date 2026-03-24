@@ -13,6 +13,7 @@
 // const resultH1 = document.querySelectorAll("h1")[0]
 
 let count = 0;
+const resultH1 = document.getElementById("result");
 
 // ----------------------------------
 
@@ -44,11 +45,20 @@ let count = 0;
 // -----------------------------------
 
 // 3번
-const resultH1 = document.getElementById("result");
 
-function plus(){
-    count++;
+// function plus(){
+//     count++;
         
+//     resultH1.innerHTML = count;
+// }
+
+// -----------------------------------
+
+// 추가
+
+function plus(number = 1){
+    count += number;
+
     resultH1.innerHTML = count;
 }
 
