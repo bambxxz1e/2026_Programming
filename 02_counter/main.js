@@ -55,7 +55,6 @@ const resultH1 = document.getElementById("result");
 // -----------------------------------
 
 // 추가
-
 resultH1.innerHTML = count;
 function plus(number = 1){
     count += number;
