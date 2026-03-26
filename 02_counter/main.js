@@ -12,7 +12,7 @@
 
 // const resultH1 = document.querySelectorAll("h1")[0]
 
-let count = 0;
+let count = 100;
 const resultH1 = document.getElementById("result");
 
 // ----------------------------------
@@ -56,6 +56,7 @@ const resultH1 = document.getElementById("result");
 
 // 추가
 
+resultH1.innerHTML = count;
 function plus(number = 1){
     count += number;
 
