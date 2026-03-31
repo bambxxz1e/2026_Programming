@@ -16,6 +16,9 @@ function CounterApp() {
       <button onClick={() => setCount((count) => count + 2)}>+2</button>
       <button onClick={() => setCount((count) => count - 1)}>-</button>
       <button onClick={() => setCount(0)}>reset</button>
+      <button onClick={() => setCount((count) => count < 10 ? count + 1 : 10)}>+(최대 10까지)</button>
+      {/* <button onClick={() => setCount((count) => Math.min(count + 1, 10)}>+(최대 10까지)</button> */}
+
       {/* 
       // Too many re-renders.
       <button onClick={setCount(0)}>reset</button> 
