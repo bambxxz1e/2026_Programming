@@ -5,7 +5,9 @@ export default function TodoAdder({addTodo}){
     const [inputTodo, setInputTodo] = useState('');
     const handleSubmit = (event) => {
         event.preventDefault();
-        addTodo(inputTodo); // input에 있는 value를 할 일로 추가하장
+        if(!inputTodo.trim()) return;
+        addTodo(inputTodo.trim()); // input에 있는 value를 할 일로 추가하장
+        setInputTodo('');
     }
 
     return(
