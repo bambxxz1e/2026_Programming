@@ -1,10 +1,11 @@
 import Checkbox from "./Checkbox.jsx";
 import Button from "./Button.jsx";
 
-export default function TodoItem(){
+export default function TodoItem({todo}){
     return(
-        <li className="todo__item todo__item--complete">
-          <Checkbox type="checkbox" className="todo__check" id="1"/>
+        // todo.isComplete가 true면 " todo__item--complete" / false면 ""
+        <li className={`todo__item${todo.isComplete ? " todo__item--complete" : ""}`}>
+          <Checkbox id={todo.id}>{todo.text}</Checkbox>
           <Button className="todo__button todo__button--edit">🖋️</Button>
           <Button className="todo__button todo__button--delete">🗑️</Button>
         </li>
