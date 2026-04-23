@@ -45,11 +45,17 @@ function TodoListApp() {
     )
   }
 
+  function deleteTodo(id) {
+    setTodos((todos) => 
+      todos.filter((todo) => todo.id !== id)
+    );
+  }
+
   return (
     <div className="todo">
       <TodoHeader />
       <TodoAdder addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
 }
