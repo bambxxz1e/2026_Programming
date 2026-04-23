@@ -51,11 +51,20 @@ function TodoListApp() {
     );
   }
 
+  function editTodo(id, newText) {
+    // todos 하나씩 꺼내서 todo.id가 같으면 text: newText
+    setTodos((todos) => 
+      todos.map((todo) =>
+        todo.id === id ? {...todo, text: newText} : todo
+      )
+    );
+  }
+
   return (
     <div className="todo">
       <TodoHeader />
       <TodoAdder addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} />
     </div>
   );
 }
